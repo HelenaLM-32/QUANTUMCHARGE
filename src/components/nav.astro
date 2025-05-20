@@ -1,0 +1,46 @@
+<nav>
+  <a href="#"><img class="logo" src="../../img/logo.png" /></a>
+
+  <div class="redes">
+    <a href="#"><img class="img" src="/img/tik-tok.png" /></a>
+    <a href="#"><img class="img" src="/img/logotipo-de-instagram.png" /></a>
+    <a href="#"><img class="img" src="/img/gorjeo.png" /></a>
+  </div>
+
+  <style>
+    nav {
+      display: flex;
+      justify-content: space-between;
+    }
+    .logo {
+      width: 170px;
+      height: 80px;
+    }
+
+    .img {
+      padding-right: 5px;
+    }
+
+    .redes {
+      margin-top: 25px;
+      margin-right: 10px;
+    }
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .redes {
+        margin-top: 10px;
+        margin-right: 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      .img {
+        padding: 0 5px;
+      }
+    }
+  </style>
+</nav>

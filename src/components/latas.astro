@@ -1,0 +1,118 @@
+<style>
+  .galeria {
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  h2 {
+    font-size: 100px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    color: #ff6123;
+  }
+
+  p {
+    color: #ff6123;
+  }
+
+  .latas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 10px;
+  }
+
+  .lata {
+    width: 220px;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease,
+      background-color 0.3s ease;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .lata:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .lata img {
+    width: 100%;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+  }
+
+  .descripcion {
+    width: 400px;
+    margin-left: 800px;
+  }
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .descripcion {
+      width: 90%;
+      margin: 0 auto 20px auto;
+      text-align: center;
+    }
+
+    .lata {
+      width: 140px;
+    }
+
+    .latas {
+      gap: 16px;
+    }
+  }
+</style>
+
+<section class="galeria">
+  <h2>BEBIDAS QUANTUM CHARGE</h2>
+  <div class="descripcion">
+    <p>
+      Energía inteligente para un rendimiento extremo. Desarrollada con
+      electrolitos avanzados, esta bebida energética está diseñada para llevarte
+      más allá de tus límites. Ya sea entrenando, trabajando o viviendo
+      intensamente, Quantuim Charge te proporciona la resistencia máxima que
+      necesitas para dominar tu día. Actívate. Cárgate. Supérate.
+    </p>
+  </div>
+  <div class="latas">
+    <a href="#">
+      <div class="lata">
+        <img
+          srcset="/img/1.png"
+          alt="Quantum Charge Classic - Beguda energètica clàssica"
+        />
+      </div>
+    </a>
+    <a href="#">
+      <div class="lata">
+        <img
+          srcset="/img/2.png"
+          alt="Quantum Charge Cítric - Beguda amb gust cítric"
+        />
+      </div>
+    </a>
+    <a href="#">
+      <div class="lata">
+        <img
+          srcset="/img/3.png"
+          alt="Quantum Charge Fruits Vermells - Beguda energètica amb fruits vermells"
+        />
+      </div>
+    </a>
+    <a href="#">
+      <div class="lata">
+        <img
+          srcset="/img/4.png"
+          alt="Quantum Charge Zero - Beguda sense sucre"
+        />
+      </div>
+    </a>
+  </div>
+</section>

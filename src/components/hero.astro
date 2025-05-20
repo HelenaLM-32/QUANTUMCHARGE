@@ -1,0 +1,89 @@
+<style>
+    .hero {
+        display: flex;
+        justify-content: center;
+        height: 500px;
+    }
+    video {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .hero-content {
+        position: absolute;
+        color: #ff6123;
+        text-align: center;
+        top: 50%;
+        transform: translateY(-50%);
+        max-width: 90%;
+    }
+
+    .hero-title {
+        font-size: 100px;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+
+    .hero-subtitle {
+        margin-top: 0;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .cta-button {
+        width: 100px;
+        color: #ff6123;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        font-size: 15px;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: background 0.3s ease;
+        border: solid #ff6123;
+        border-radius: 50%;
+    }
+
+    .cta-button:hover {
+        background-color: #ff6123;
+        color: black;
+    }
+    @media (max-width: 768px) {
+        .hero {
+            height: 400px;
+        }
+
+        .hero-title {
+            font-size: 40px;
+        }
+
+        .hero-subtitle {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-button {
+            font-size: 14px;
+            padding: 0.5rem 1rem;
+            width: auto;
+            border-radius: 20px;
+        }
+
+        .hero-content {
+            max-width: 100%;
+            padding: 0 1rem;
+        }
+    }
+</style>
+
+<section class="hero">
+    <video autoplay muted loop preload="auto" poster="/img/tophero.png">
+        <source src="/img/hero.mp4" type="video/mp4" />
+        El teu navegador no suporta vídeos HTML5.
+    </video>
+    <div class="hero-content">
+        <h1 class="hero-title">QUANTUM CHARGE</h1>
+        <p class="hero-subtitle">Energía inteligente. Rendimiento extremo.</p>
+        <a href="#" class="cta-button">Actívate ahora</a>
+    </div>
+</section>
