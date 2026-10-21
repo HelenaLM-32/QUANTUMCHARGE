@@ -1,0 +1,78 @@
+<section class="concepto" aria-labelledby="concepto-titulo">
+  <div class="concepto-copy">
+    <p class="eyebrow">EL UNIVERSO QUANTUM</p>
+    <h2 id="concepto-titulo">UNA MARCA<br />FUERA DE ÓRBITA.</h2>
+    <p class="intro">
+      Un concepto de bebida energética construido alrededor de una idea: convertir
+      la intensidad en identidad.
+    </p>
+    <p class="detalle">
+      El sistema visual mezcla códigos de ciencia y deporte, una paleta de alto
+      contraste y cuatro latas con personalidad propia. Una dirección creativa
+      pensada para destacar tanto en el estante como en pantalla.
+    </p>
+  </div>
+  <img
+    class="concepto-imagen"
+    src="/images/icustrada.png"
+    alt="Composición de campaña Quantum Charge con dos latas en diferentes escenarios"
+    loading="lazy"
+  />
+</section>
+
+<style>
+    .concepto {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        align-items: center;
+        gap: clamp(2rem, 7vw, 7rem);
+        padding: clamp(3rem, 9vw, 8rem) clamp(1.25rem, 8vw, 8rem);
+        background: #111;
+    }
+
+    .concepto-copy {
+        max-width: 34rem;
+    }
+
+    .eyebrow {
+        margin: 0;
+        color: #ff6123;
+        font-family: "Space Mono", monospace;
+        font-size: 0.7rem;
+        letter-spacing: 0.18em;
+    }
+
+    h2 {
+        margin: 1rem 0;
+        color: #f5efe5;
+        font-size: clamp(2.8rem, 6vw, 5.5rem);
+        line-height: 0.9;
+    }
+
+    .intro {
+        color: #f5efe5;
+        font-size: clamp(1.1rem, 2vw, 1.5rem);
+        line-height: 1.4;
+    }
+
+    .detalle {
+        margin: 0;
+        color: #aaa49b;
+        font-family: "Space Mono", monospace;
+        font-size: 0.8rem;
+        line-height: 1.8;
+    }
+
+    .concepto-imagen {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    @media (max-width: 768px) {
+        .concepto {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+    }
+</style>

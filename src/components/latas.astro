@@ -5,115 +5,136 @@
   }
 
   h2 {
-    font-size: 100px;
+    font-size: clamp(2.25rem, 8vw, 6.25rem);
+    line-height: 0.95;
     margin-bottom: 30px;
     margin-top: 10px;
     color: #ff6123;
+    padding: 0 1rem;
+  }
+
+  .eyebrow {
+    margin: 0 0 0.75rem;
+    color: #f5efe5;
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
   }
 
   p {
     color: #ff6123;
+    font-family: "Space Mono", monospace;
+    line-height: 1.7;
   }
 
   .latas {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: clamp(12px, 2vw, 24px);
     margin-bottom: 10px;
+    padding: 0 1rem;
   }
 
   .lata {
-    width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: clamp(135px, 19vw, 220px);
     transition:
       transform 0.3s ease,
       box-shadow 0.3s ease,
       background-color 0.3s ease;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 12px 12px 18px;
+    border: 1px solid rgb(255 255 255 / 10%);
+    border-radius: 12px;
+    background: linear-gradient(160deg, #151515, #080808);
   }
 
   .lata:hover {
-    transform: scale(1.08);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgb(255 97 35 / 12%);
+  }
+
+  .lata:focus-within {
+    outline: 2px solid #ff6123;
+    outline-offset: 4px;
   }
 
   .lata img {
+    display: block;
     width: 100%;
+    aspect-ratio: 1 / 1.35;
     object-fit: contain;
-    transition: opacity 0.3s ease;
+    transition: transform 0.3s ease;
+  }
+
+  .lata:hover img {
+    transform: scale(1.04);
+  }
+
+  .sabor {
+    margin: 0.5rem 0 0;
+    color: #f5efe5;
+    font-size: clamp(1rem, 1.8vw, 1.3rem);
+    letter-spacing: 0.04em;
+  }
+
+  .nota-sabor {
+    margin: 0.2rem 0 0;
+    color: #aaa49b;
+    font-family: "Space Mono", monospace;
+    font-size: 0.65rem;
   }
 
   .descripcion {
-    width: 400px;
-    margin-left: 800px;
+    width: min(90%, 48rem);
+    margin: 0 auto 2rem;
   }
 
   @media (max-width: 768px) {
     h2 {
-      font-size: 36px;
       margin-bottom: 20px;
     }
 
-    .descripcion {
-      width: 90%;
-      margin: 0 auto 20px auto;
+    .descripcion p {
       text-align: center;
     }
 
     .lata {
-      width: 140px;
-    }
-
-    .latas {
-      gap: 16px;
+      width: clamp(130px, 38vw, 180px);
     }
   }
 </style>
 
-<section class="galeria">
-  <h2>BEBIDAS QUANTUM CHARGE</h2>
+<section class="galeria" id="productos">
+  <p class="eyebrow">COLECCIÓN 01 / CUATRO SABORES</p>
+  <h2>ENCUENTRA TU ÓRBITA</h2>
   <div class="descripcion">
     <p>
-      Energía inteligente para un rendimiento extremo. Desarrollada con
-      electrolitos avanzados, esta bebida energética está diseñada para llevarte
-      más allá de tus límites. Ya sea entrenando, trabajando o viviendo
-      intensamente, Quantuim Charge te proporciona la resistencia máxima que
-      necesitas para dominar tu día. Actívate. Cárgate. Supérate.
+      Cuatro perfiles, una misma energía visual. Descubre la colección Quantum
+      Charge y elige el sabor que va contigo.
     </p>
   </div>
   <div class="latas">
-    <a href="#">
-      <div class="lata">
-        <img
-          srcset="/images/1.png"
-          alt="Quantum Charge Classic - Beguda energètica clàssica"
-        />
-      </div>
-    </a>
-    <a href="#">
-      <div class="lata">
-        <img
-          srcset="/images/2.png"
-          alt="Quantum Charge Cítric - Beguda amb gust cítric"
-        />
-      </div>
-    </a>
-    <a href="#">
-      <div class="lata">
-        <img
-          srcset="/images/3.png"
-          alt="Quantum Charge Fruits Vermells - Beguda energètica amb fruits vermells"
-        />
-      </div>
-    </a>
-    <a href="#">
-      <div class="lata">
-        <img
-          srcset="/images/4.png"
-          alt="Quantum Charge Zero - Beguda sense sucre"
-        />
-      </div>
-    </a>
+    <article class="lata">
+      <img src="/images/1.png" alt="Lata Quantum Charge Berry Blast" loading="lazy" />
+      <h3 class="sabor">BERRY BLAST</h3>
+      <p class="nota-sabor">FRUTOS ROJOS</p>
+    </article>
+    <article class="lata">
+      <img src="/images/2.png" alt="Lata Quantum Charge Citrus Burst" loading="lazy" />
+      <h3 class="sabor">CITRUS BURST</h3>
+      <p class="nota-sabor">CÍTRICOS</p>
+    </article>
+    <article class="lata">
+      <img src="/images/3.png" alt="Lata Quantum Charge Tropical Punch" loading="lazy" />
+      <h3 class="sabor">TROPICAL PUNCH</h3>
+      <p class="nota-sabor">FRUTAS TROPICALES</p>
+    </article>
+    <article class="lata">
+      <img src="/images/4.png" alt="Lata Quantum Charge Cosmic Grape" loading="lazy" />
+      <h3 class="sabor">COSMIC GRAPE</h3>
+      <p class="nota-sabor">UVA</p>
+    </article>
   </div>
 </section>

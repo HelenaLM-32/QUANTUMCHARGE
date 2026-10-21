@@ -1,19 +1,42 @@
-<html>
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quantum Charge</title>
+    <title>Quantum Charge — Proyecto conceptual de branding</title>
+    <meta
+      name="description"
+      content="Quantum Charge: concepto de marca, diseño de packaging y experiencia web para una colección de bebidas energéticas."
+    />
+    <meta name="theme-color" content="#000000" />
     <link rel="icon" href="/images/smalllogo.png" type="image/png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
     <style>
+      :global(*) {
+        box-sizing: border-box;
+      }
+
+      :global(html) {
+        scroll-behavior: smooth;
+      }
+
+      :global(body) {
+        margin: 0;
+      }
+
       body {
         display: flex;
         flex-direction: column;
         background-color: #000000;
         font-family: "Bebas Neue";
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        :global(html) {
+          scroll-behavior: auto;
+        }
       }
     </style>
   </head>
