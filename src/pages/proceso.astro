@@ -1,0 +1,439 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/nav.astro";
+import Footer from "../components/footer.astro";
+---
+
+<Layout
+  title="Proceso creativo — Quantum Charge"
+  description="Caso de estudio conceptual de Quantum Charge: estrategia de marca, sistema visual, diseño de packaging y experiencia web."
+>
+  <Nav />
+  <main>
+    <header class="intro">
+      <p class="eyebrow">CASO DE ESTUDIO <span>/</span> QUANTUM CHARGE</p>
+      <h1>DE LA ENERGÍA<br />A LA IDENTIDAD.</h1>
+      <div class="intro-bottom">
+        <p>
+          El proceso detrás de una marca conceptual de bebidas energéticas:
+          estrategia, lenguaje visual y una experiencia digital a juego.
+        </p>
+        <a href="#proceso">RECORRER EL PROCESO <span aria-hidden="true">↓</span></a>
+      </div>
+      <p class="concept-note">
+        PROYECTO FICTICIO · EJERCICIO DE BRANDING, PACKAGING Y DISEÑO WEB
+      </p>
+    </header>
+
+    <section class="brief" aria-labelledby="brief-title">
+      <div class="section-index"><span>01</span><span>EL PUNTO DE PARTIDA</span></div>
+      <div class="brief-copy">
+        <h2 id="brief-title">UN PRODUCTO<br />CON ACTITUD.</h2>
+        <p>
+          El reto de este concepto era crear una identidad reconocible para una
+          bebida energética dirigida a un público activo y curioso por la
+          ciencia. La marca debía sentirse intensa y contemporánea, sin perder
+          claridad al presentar cuatro sabores distintos.
+        </p>
+      </div>
+    </section>
+
+    <section class="sistema" id="proceso" aria-labelledby="sistema-title">
+      <div class="section-index"><span>02</span><span>EL SISTEMA VISUAL</span></div>
+      <div class="sistema-grid">
+        <div>
+          <h2 id="sistema-title">CIENCIA<br />EN MOVIMIENTO.</h2>
+          <p>
+            El nombre y el símbolo atómico establecen el territorio visual.
+            El naranja aporta energía; el negro y el blanco crean contraste; y
+            los acentos de color diferencian cada sabor.
+          </p>
+        </div>
+        <div class="paleta" aria-label="Paleta de color: naranja, negro y blanco">
+          <div class="color color-orange"><span>#FF6123</span></div>
+          <div class="color color-black"><span>#111111</span></div>
+          <div class="color color-cream"><span>#F5EFE5</span></div>
+        </div>
+      </div>
+      <div class="tipos">
+        <div>
+          <span>DISPLAY</span>
+          <p class="tipo-display">BEBAS NEUE</p>
+        </div>
+        <div>
+          <span>TEXTO</span>
+          <p class="tipo-mono">SPACE MONO / 0123456789</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="packaging" aria-labelledby="packaging-title">
+      <div class="section-index"><span>03</span><span>DISEÑO DE PACKAGING</span></div>
+      <h2 id="packaging-title">UNA FAMILIA.<br />CUATRO PERSONALIDADES.</h2>
+      <p class="packaging-intro">
+        Una estructura común mantiene la colección unida; el color y el nombre
+        de cada perfil ayudan a distinguirla de un vistazo.
+      </p>
+      <div class="productos">
+        <figure>
+          <img src="/images/1.png" alt="Lata conceptual Berry Blast en azul" loading="lazy" />
+          <figcaption><span>01</span> BERRY BLAST</figcaption>
+        </figure>
+        <figure>
+          <img src="/images/2.png" alt="Lata conceptual Citrus Burst en amarillo" loading="lazy" />
+          <figcaption><span>02</span> CITRUS BURST</figcaption>
+        </figure>
+        <figure>
+          <img src="/images/3.png" alt="Lata conceptual Tropical Punch en turquesa" loading="lazy" />
+          <figcaption><span>03</span> TROPICAL PUNCH</figcaption>
+        </figure>
+        <figure>
+          <img src="/images/4.png" alt="Lata conceptual Cosmic Grape en violeta" loading="lazy" />
+          <figcaption><span>04</span> COSMIC GRAPE</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="digital" aria-labelledby="digital-title">
+      <div class="section-index"><span>04</span><span>EXPERIENCIA DIGITAL</span></div>
+      <div class="digital-copy">
+        <h2 id="digital-title">DEL ENVASE<br />A LA PANTALLA.</h2>
+        <p>
+          La landing traslada el mismo lenguaje visual a una experiencia
+          responsive: tipografía expresiva para marcar el ritmo, composición
+          editorial y una navegación directa hacia la colección.
+        </p>
+        <a class="back-link" href="/">VOLVER A LA LANDING <span aria-hidden="true">↗</span></a>
+      </div>
+      <img
+        src="/images/icustrada.png"
+        alt="Aplicación del concepto Quantum Charge en una composición de campaña"
+        loading="lazy"
+      />
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .intro,
+  .brief,
+  .sistema,
+  .packaging,
+  .digital {
+    padding: clamp(3.5rem, 9vw, 8rem) clamp(1.25rem, 8vw, 8rem);
+  }
+
+  .intro {
+    min-height: min(75vh, 760px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background:
+      linear-gradient(90deg, rgb(0 0 0 / 82%), rgb(0 0 0 / 35%)),
+      url("/images/tophero.png") center 42% / cover;
+  }
+
+  .eyebrow,
+  .section-index,
+  .concept-note,
+  .tipos span,
+  .color span,
+  figcaption,
+  .intro-bottom a,
+  .back-link {
+    font-family: "Space Mono", monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+  }
+
+  .eyebrow,
+  .concept-note {
+    color: #ff6123;
+  }
+
+  .eyebrow span {
+    color: #f5efe5;
+  }
+
+  h1,
+  h2 {
+    color: #f5efe5;
+    font-size: clamp(3.25rem, 11vw, 9rem);
+    line-height: 0.83;
+    margin: 2rem 0;
+  }
+
+  .intro-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 2rem;
+    max-width: 70rem;
+  }
+
+  .intro-bottom p {
+    max-width: 32rem;
+    color: #f5efe5;
+    font-family: "Space Mono", monospace;
+    font-size: clamp(0.85rem, 1.4vw, 1rem);
+    line-height: 1.8;
+  }
+
+  .intro-bottom a,
+  .back-link {
+    flex: 0 0 auto;
+    color: #ff6123;
+    text-decoration: none;
+  }
+
+  .intro-bottom a:hover,
+  .back-link:hover {
+    color: #f5efe5;
+  }
+
+  .concept-note {
+    margin: 2rem 0 0;
+    font-size: 0.6rem;
+  }
+
+  .brief,
+  .digital {
+    display: grid;
+    grid-template-columns: minmax(10rem, 0.6fr) minmax(0, 1.4fr);
+    gap: clamp(2rem, 7vw, 7rem);
+    background: #f5efe5;
+  }
+
+  .section-index {
+    display: flex;
+    gap: 1rem;
+    align-items: start;
+    color: #242424;
+  }
+
+  .section-index span:first-child {
+    color: #ff6123;
+  }
+
+  .brief h2,
+  .digital h2 {
+    margin-top: 0;
+    color: #111;
+    font-size: clamp(2.8rem, 6.5vw, 6rem);
+  }
+
+  .brief-copy > p,
+  .digital-copy > p {
+    max-width: 42rem;
+    color: #37332f;
+    font-family: "Space Mono", monospace;
+    font-size: 0.85rem;
+    line-height: 1.9;
+  }
+
+  .sistema {
+    background: #111;
+  }
+
+  .sistema .section-index,
+  .packaging .section-index {
+    color: #f5efe5;
+  }
+
+  .sistema-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: clamp(2rem, 8vw, 8rem);
+    margin-top: 3rem;
+  }
+
+  .sistema h2,
+  .packaging h2 {
+    max-width: 52rem;
+    font-size: clamp(3rem, 8vw, 7rem);
+  }
+
+  .sistema-grid > div:first-child > p,
+  .packaging-intro {
+    max-width: 34rem;
+    color: #aaa49b;
+    font-family: "Space Mono", monospace;
+    font-size: 0.8rem;
+    line-height: 1.9;
+  }
+
+  .paleta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    min-height: 15rem;
+  }
+
+  .color {
+    display: flex;
+    align-items: end;
+    padding: 0.75rem;
+  }
+
+  .color span {
+    font-size: 0.6rem;
+  }
+
+  .color-orange {
+    background: #ff6123;
+    color: #111;
+  }
+
+  .color-black {
+    border: 1px solid #555;
+    background: #080808;
+    color: #f5efe5;
+  }
+
+  .color-cream {
+    background: #f5efe5;
+    color: #111;
+  }
+
+  .tipos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 4rem;
+    padding-top: 1rem;
+    border-top: 1px solid #444;
+  }
+
+  .tipos span {
+    color: #ff6123;
+    font-size: 0.6rem;
+  }
+
+  .tipo-display {
+    margin: 0.5rem 0 0;
+    color: #f5efe5;
+    font-size: clamp(2rem, 4vw, 4rem);
+  }
+
+  .tipo-mono {
+    margin: 0.8rem 0 0;
+    color: #f5efe5;
+    font-family: "Space Mono", monospace;
+    font-size: clamp(0.8rem, 1.8vw, 1.4rem);
+  }
+
+  .packaging {
+    background: #080808;
+  }
+
+  .packaging h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .packaging-intro {
+    margin-bottom: 3rem;
+  }
+
+  .productos {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .productos figure {
+    min-width: 0;
+    margin: 0;
+    padding: clamp(0.5rem, 2vw, 1.25rem);
+    border: 1px solid rgb(255 255 255 / 12%);
+    border-radius: 8px;
+    background: linear-gradient(150deg, #171717, #0a0a0a);
+  }
+
+  .productos img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 0.72;
+    object-fit: contain;
+  }
+
+  figcaption {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    padding-top: 0.75rem;
+    color: #f5efe5;
+    font-size: clamp(0.5rem, 0.9vw, 0.7rem);
+    white-space: nowrap;
+  }
+
+  figcaption span {
+    color: #ff6123;
+  }
+
+  .digital {
+    grid-template-columns: minmax(10rem, 0.6fr) minmax(0, 1fr) minmax(15rem, 1fr);
+    align-items: center;
+    gap: clamp(1.5rem, 5vw, 5rem);
+  }
+
+  .digital h2 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+  }
+
+  .digital img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .intro {
+      min-height: 75vh;
+    }
+
+    .intro-bottom {
+      align-items: start;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .brief,
+    .digital {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .sistema-grid {
+      grid-template-columns: 1fr;
+      margin-top: 2rem;
+    }
+
+    .paleta {
+      min-height: 10rem;
+    }
+
+    .tipos {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .productos {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    figcaption {
+      white-space: normal;
+    }
+
+    .digital img {
+      max-width: 38rem;
+    }
+  }
+</style>

@@ -1,12 +1,22 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Quantum Charge — Proyecto conceptual de branding",
+  description =
+    "Quantum Charge: concepto de marca, diseño de packaging y experiencia web para una colección de bebidas energéticas.",
+} = Astro.props;
+---
+
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quantum Charge — Proyecto conceptual de branding</title>
-    <meta
-      name="description"
-      content="Quantum Charge: concepto de marca, diseño de packaging y experiencia web para una colección de bebidas energéticas."
-    />
+    <title>{title}</title>
+    <meta name="description" content={description} />
     <meta name="theme-color" content="#000000" />
     <link rel="icon" href="/images/smalllogo.png" type="image/png" />
     <link

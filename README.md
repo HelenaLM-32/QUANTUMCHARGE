@@ -4,6 +4,9 @@ Concepto de marca y experiencia web para una colección ficticia de bebidas
 energéticas. El proyecto reúne dirección visual, diseño de packaging y una
 landing page responsive desarrollada con Astro.
 
+Incluye una landing de marca y una página de proceso creativo con el sistema
+visual, la colección de envases y la experiencia digital.
+
 ## Vista previa local
 
 ```sh
