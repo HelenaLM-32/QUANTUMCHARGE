@@ -1,102 +1,71 @@
-<div class="footer">
+<footer class="footer">
     <div class="footer-section">
-        <h1 class="h1-footer">MANTENTE AL DÍA</h1>
-        <div class="redes">
-            <a href="#"><img class="img" src="/images/tik-tok2.png" /></a>
-            <a href="#"
-                ><img class="img" src="/images/logotipo-de-instagram2.png" /></a
-            >
-            <a href="#"><img class="img" src="/images/gorjeo2.png" /></a>
+        <div>
+            <p class="eyebrow">QUANTUM CHARGE</p>
+            <h2 class="h1-footer">ENERGÍA EN<br />MOVIMIENTO.</h2>
         </div>
+        <a class="back-to-top" href="#inicio">VOLVER ARRIBA <span aria-hidden="true">↑</span></a>
     </div>
     <p class="p-footer">
-        Regístrate con tu dirección de correo electrónico para recibir noticias
-        y actualizaciones.
+        Proyecto conceptual de branding y diseño web.
     </p>
-    <div>
-        <input class="input" placeholder="Correo electrónico" />
-        <a href="#" class="button">Suscribirse</a>
-    </div>
 
     <style>
         .footer {
             padding-top: 20px;
-            margin-left: 10px;
+            padding-inline: clamp(1rem, 4vw, 3rem);
             margin-bottom: 20px;
         }
         .footer-section {
             display: flex;
             justify-content: space-between;
+            align-items: end;
         }
         .h1-footer {
-            color: white;
-            font-size: 50px;
-            margin-bottom: 0px;
-            margin-top: 0px;
+            color: #f5efe5;
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            line-height: 0.9;
+            margin: 0.5rem 0 0;
+        }
+        .eyebrow {
+            color: #ff6123;
+            font-family: "Space Mono", monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.18em;
         }
         .p-footer {
-            color: white;
-            margin-top: 0px;
+            color: #aaa49b;
+            margin: 2rem 0 0;
+            font-family: "Space Mono", monospace;
+            font-size: 0.75rem;
         }
-        .input {
-            height: 40px;
-        }
-        .img {
-            padding-right: 5px;
-        }
-        .redes {
-            margin-top: 10px;
-            margin-right: 10px;
-        }
-        .button {
-            width: 100px;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border: none;
-            font-size: 15px;
+        .back-to-top {
+            color: #f5efe5;
+            padding: 0.75rem 1rem;
+            border: 1px solid #555;
+            border-radius: 999px;
+            font-family: "Space Mono", monospace;
+            font-size: 0.7rem;
             text-decoration: none;
-            transition: background 0.3s ease;
-            border: solid white;
-            border-radius: 50%;
-            margin-left: 10px;
+            transition: border-color 0.2s ease, color 0.2s ease;
         }
-        .button:hover {
-            background-color: white;
-            color: black;
+        .back-to-top:hover {
+            border-color: #ff6123;
+            color: #ff6123;
         }
         @media (max-width: 768px) {
             .footer {
-                margin-left: 0;
-                padding: 20px;
+                padding: 20px 1rem;
                 text-align: center;
             }
             .footer-section {
                 flex-direction: column;
-                align-items: center;
+                align-items: flex-start;
+                gap: 1.5rem;
             }
             .h1-footer {
-                font-size: 30px;
-                margin-bottom: 10px;
-            }
-            .p-footer {
-                font-size: 14px;
-                padding: 0 10px;
-            }
-            .redes {
-                margin: 10px 0;
-            }
-            .input {
-                width: 80%;
-                max-width: 300px;
-                margin-top: 10px;
-            }
-            .button {
-                display: inline-block;
-                margin-top: 10px;
-                border-radius: 20px;
-                padding: 0.5rem 1rem;
-                width: auto;
+                font-size: 2.5rem;
             }
         }
     </style>
-</div>
+</footer>
