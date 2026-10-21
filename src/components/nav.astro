@@ -1,10 +1,17 @@
+---
+const isProcessPage = Astro.url.pathname.startsWith("/proceso");
+---
+
 <nav aria-label="Navegación principal">
-  <a href="#inicio" aria-label="Quantum Charge, inicio">
+  <a href="/#inicio" aria-label="Quantum Charge, inicio">
     <img class="logo" src="/images/logo.png" alt="Quantum Charge" />
   </a>
 
-  <a class="brand-note" href="/proceso/">
-    PROYECTO CONCEPTUAL <span>·</span> VER PROCESO <span aria-hidden="true">↗</span>
+  <a class="brand-note" href={isProcessPage ? "/#inicio" : "/proceso/"}>
+    {isProcessPage
+      ? "PROYECTO CONCEPTUAL · VOLVER A LA LANDING"
+      : "PROYECTO CONCEPTUAL · VER PROCESO"}
+    <span aria-hidden="true">↗</span>
   </a>
 
   <style>

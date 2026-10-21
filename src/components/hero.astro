@@ -6,6 +6,7 @@
         align-items: center;
         min-height: clamp(400px, 62vw, 680px);
         overflow: hidden;
+        background: #080808;
     }
 
     video {
@@ -23,6 +24,10 @@
         text-align: center;
         width: min(100% - 2rem, 1000px);
         padding: 3rem 0;
+    }
+
+    .hero-product {
+        display: none;
     }
 
     .hero-title {
@@ -58,7 +63,27 @@
 
     @media (max-width: 768px) {
         .hero {
-            min-height: 400px;
+            min-height: min(76svh, 620px);
+            background:
+                radial-gradient(ellipse at 76% 68%, rgb(255 97 35 / 18%), transparent 52%),
+                linear-gradient(145deg, #111, #050505 72%);
+        }
+
+        .hero video {
+            display: none;
+        }
+
+        .hero-product {
+            position: absolute;
+            right: -4%;
+            bottom: -10%;
+            display: block;
+            width: min(46vw, 220px);
+            max-height: 92%;
+            object-fit: contain;
+            opacity: 0.78;
+            filter: drop-shadow(0 18px 36px rgb(255 97 35 / 14%));
+            pointer-events: none;
         }
 
         .hero-subtitle {
@@ -73,16 +98,32 @@
         }
 
         .hero-content {
+            align-self: flex-start;
+            margin-top: clamp(2rem, 8vh, 4rem);
             padding: 2rem 0;
+            text-align: left;
+            text-shadow: 0 2px 18px #000;
+        }
+
+        .hero-title {
+            max-width: 8ch;
+            font-size: clamp(2.6rem, 10vw, 4rem);
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .hero video {
+            display: none;
         }
     }
 </style>
 
 <section class="hero" id="inicio" aria-label="Presentación de Quantum Charge">
-    <video autoplay muted loop preload="auto" poster="/images/tophero.png">
+    <video autoplay muted loop playsinline preload="metadata" poster="/images/tophero.png" aria-hidden="true">
         <source src="/videos/hero.mp4" type="video/mp4" />
         Tu navegador no admite vídeos HTML5.
     </video>
+    <img class="hero-product" src="/images/2.png" alt="" aria-hidden="true" />
     <div class="hero-content">
         <h1 class="hero-title">QUANTUM CHARGE</h1>
         <p class="hero-subtitle">Una nueva órbita de sabor.</p>
