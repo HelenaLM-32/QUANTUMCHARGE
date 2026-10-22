@@ -69,6 +69,10 @@
                 linear-gradient(145deg, #111, #050505 72%);
         }
 
+        .hero video {
+            display: none;
+        }
+
         .hero-product {
             position: absolute;
             right: -4%;
@@ -115,7 +119,7 @@
 </style>
 
 <section class="hero" id="inicio" aria-label="Presentación de Quantum Charge">
-    <video autoplay muted loop playsinline preload="metadata" poster="/images/tophero.png" aria-hidden="true">
+    <video id="hero-video" autoplay muted loop playsinline preload="metadata" poster="/images/tophero.png" aria-hidden="true">
         <source src="/videos/hero.mp4" type="video/mp4" />
         Tu navegador no admite vídeos HTML5.
     </video>
@@ -126,3 +130,15 @@
         <a href="#productos" class="cta-button">Explora la colección</a>
     </div>
 </section>
+
+<script>
+    const heroVideo = document.querySelector<HTMLVideoElement>("#hero-video");
+
+    if (heroVideo) {
+        heroVideo.muted = true;
+        heroVideo.defaultMuted = true;
+        heroVideo.play().catch((error: unknown) => {
+            console.error("No se pudo iniciar automáticamente el video del hero.", error);
+        });
+    }
+</script>
