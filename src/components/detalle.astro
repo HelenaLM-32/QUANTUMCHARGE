@@ -1,5 +1,4 @@
 <section class="detalle" aria-label="Frase de marca">
-  <hr class="hr" />
   <p class="sr-only">Todo comienza con una idea.</p>
   <div class="marquee" aria-hidden="true">
     <div class="track">
@@ -8,16 +7,8 @@
         <span>TODO COMIENZA CON UNA IDEA <img class="estrella" src="/images/estrella-blanca.png" alt="" /></span>
         <span>TODO COMIENZA CON UNA IDEA <img class="estrella" src="/images/estrella-blanca.png" alt="" /></span>
         <span>TODO COMIENZA CON UNA IDEA <img class="estrella" src="/images/estrella-blanca.png" alt="" /></span>
-        <span>TODO COMIENZA CON UNA IDEA <img class="estrella" src="/images/estrella-blanca.png" alt="" /></span>
-        <span>TODO COMIENZA CON UNA IDEA <img class="estrella" src="/images/estrella-blanca.png" alt="" /></span>
-        <span>TODO COMIENZA CON UNA IDEA <img class="estrella" src="/images/estrella-blanca.png" alt="" /></span>
-        <span>TODO COMIENZA CON UNA IDEA <img class="estrella" src="/images/estrella-blanca.png" alt="" /></span>
       </div>
       <div class="mensaje">
-        <span>TODO COMIENZA CON UNA IDEA <img class="estrella" src="/images/estrella-blanca.png" alt="" /></span>
-        <span>TODO COMIENZA CON UNA IDEA <img class="estrella" src="/images/estrella-blanca.png" alt="" /></span>
-        <span>TODO COMIENZA CON UNA IDEA <img class="estrella" src="/images/estrella-blanca.png" alt="" /></span>
-        <span>TODO COMIENZA CON UNA IDEA <img class="estrella" src="/images/estrella-blanca.png" alt="" /></span>
         <span>TODO COMIENZA CON UNA IDEA <img class="estrella" src="/images/estrella-blanca.png" alt="" /></span>
         <span>TODO COMIENZA CON UNA IDEA <img class="estrella" src="/images/estrella-blanca.png" alt="" /></span>
         <span>TODO COMIENZA CON UNA IDEA <img class="estrella" src="/images/estrella-blanca.png" alt="" /></span>
@@ -25,15 +16,12 @@
       </div>
     </div>
   </div>
-  <hr class="hr" />
 
   <style>
     .detalle {
       overflow: hidden;
-    }
-
-    .hr {
-      border-color: #ff6123;
+      border-block: 1px solid rgb(255 97 35 / 45%);
+      background: #080808;
     }
 
     .sr-only {
@@ -48,34 +36,44 @@
       border: 0;
     }
 
-    .track,
-    .mensaje {
+    .marquee {
+      padding-block: clamp(0.75rem, 1.8vw, 1.25rem);
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+      mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    }
+
+    .track {
       display: flex;
       width: max-content;
     }
 
     .track {
-      animation: scroll 32s linear infinite;
+      animation: scroll 42s linear infinite;
     }
 
     .mensaje {
+      flex: 0 0 max-content;
+      min-width: 100vw;
       align-items: center;
-      gap: 1rem;
-      padding-right: 1rem;
+      justify-content: space-around;
+      gap: clamp(2rem, 5vw, 5rem);
+      padding-inline: clamp(1rem, 3vw, 3rem);
       color: #ff6123;
-      font-size: 13px;
+      font-size: clamp(1.2rem, 2.5vw, 2rem);
+      letter-spacing: 0.04em;
       white-space: nowrap;
     }
 
     .mensaje span {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: clamp(0.75rem, 2vw, 1.5rem);
     }
 
     .estrella {
-      width: 15px;
-      height: 15px;
+      width: clamp(0.8rem, 1.5vw, 1.25rem);
+      height: clamp(0.8rem, 1.5vw, 1.25rem);
+      object-fit: contain;
     }
 
     @keyframes scroll {
@@ -85,13 +83,9 @@
     }
 
     @media (max-width: 768px) {
-      .mensaje {
-        font-size: 11px;
-      }
-
-      .estrella {
-        width: 12px;
-        height: 12px;
+      .marquee {
+        -webkit-mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+        mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
       }
     }
 
