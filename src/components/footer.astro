@@ -1,10 +1,14 @@
+---
+const isProcessPage = Astro.url.pathname.startsWith("/proceso");
+---
+
 <footer class="footer">
     <div class="footer-section">
         <div>
             <p class="eyebrow">QUANTUM CHARGE</p>
             <h2 class="h1-footer">ENERGÍA EN<br />MOVIMIENTO.</h2>
         </div>
-        <a class="back-to-top" href="/#inicio">VOLVER ARRIBA <span aria-hidden="true">↑</span></a>
+        <a class="back-to-top" href={isProcessPage ? "#inicio" : "/#inicio"}>VOLVER ARRIBA <span aria-hidden="true">↑</span></a>
     </div>
     <p class="p-footer">
         © 2026 Helena López · Proyecto conceptual de branding y diseño web.
