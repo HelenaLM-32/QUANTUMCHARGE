@@ -18,7 +18,14 @@ const {
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="theme-color" content="#000000" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta name="twitter:card" content="summary" />
     <link rel="icon" href="/images/smalllogo.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
@@ -40,17 +47,51 @@ const {
         display: flex;
         flex-direction: column;
         background-color: #000000;
-        font-family: "Bebas Neue";
+        color: #f5efe5;
+        font-family: "Bebas Neue", Impact, sans-serif;
+      }
+
+      :global(a:focus-visible) {
+        outline: 2px solid #ff6123;
+        outline-offset: 4px;
+      }
+
+      .skip-link {
+        position: fixed;
+        z-index: 10;
+        top: 1rem;
+        left: 1rem;
+        transform: translateY(-200%);
+        padding: 0.75rem 1rem;
+        background: #f5efe5;
+        color: #111;
+        font-family: "Space Mono", monospace;
+        font-size: 0.8rem;
+        text-decoration: none;
+      }
+
+      .skip-link:focus {
+        transform: translateY(0);
       }
 
       @media (prefers-reduced-motion: reduce) {
         :global(html) {
           scroll-behavior: auto;
         }
+
+        :global(*),
+        :global(*::before),
+        :global(*::after) {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          scroll-behavior: auto !important;
+          transition-duration: 0.01ms !important;
+        }
       }
     </style>
   </head>
   <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
     <slot />
   </body>
 </html>

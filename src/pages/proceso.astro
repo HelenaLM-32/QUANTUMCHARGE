@@ -9,7 +9,7 @@ import Footer from "../components/footer.astro";
   description="Caso de estudio conceptual de Quantum Charge: estrategia de marca, sistema visual, diseño de packaging y experiencia web."
 >
   <Nav />
-  <main>
+  <main id="contenido">
     <header class="intro" id="inicio">
       <p class="eyebrow">CASO DE ESTUDIO <span>/</span> QUANTUM CHARGE</p>
       <h1>DE LA ENERGÍA<br />A LA IDENTIDAD.</h1>
@@ -20,6 +20,20 @@ import Footer from "../components/footer.astro";
         </p>
         <a href="#proceso">RECORRER EL PROCESO <span aria-hidden="true">↓</span></a>
       </div>
+      <dl class="project-facts" aria-label="Ficha del proyecto">
+        <div>
+          <dt>MI ROL</dt>
+          <dd>Dirección visual y desarrollo front-end</dd>
+        </div>
+        <div>
+          <dt>ENTREGABLES</dt>
+          <dd>Identidad · Packaging · Experiencia web</dd>
+        </div>
+        <div>
+          <dt>STACK</dt>
+          <dd>Astro · HTML · CSS</dd>
+        </div>
+      </dl>
       <p class="concept-note">
         PROYECTO FICTICIO · EJERCICIO DE BRANDING, PACKAGING Y DISEÑO WEB
       </p>
@@ -76,19 +90,19 @@ import Footer from "../components/footer.astro";
       </p>
       <div class="productos">
         <figure>
-          <img src="/images/1.png" alt="Lata conceptual Berry Blast en azul" loading="lazy" />
+          <img src="/images/1.png" alt="Lata conceptual Berry Blast en azul" loading="lazy" width="1587" height="2245" />
           <figcaption><span>01</span> BERRY BLAST</figcaption>
         </figure>
         <figure>
-          <img src="/images/2.png" alt="Lata conceptual Citrus Burst en amarillo" loading="lazy" />
+          <img src="/images/2.png" alt="Lata conceptual Citrus Burst en amarillo" loading="lazy" width="1587" height="2245" />
           <figcaption><span>02</span> CITRUS BURST</figcaption>
         </figure>
         <figure>
-          <img src="/images/3.png" alt="Lata conceptual Tropical Punch en turquesa" loading="lazy" />
+          <img src="/images/3.png" alt="Lata conceptual Tropical Punch en turquesa" loading="lazy" width="1587" height="2245" />
           <figcaption><span>03</span> TROPICAL PUNCH</figcaption>
         </figure>
         <figure>
-          <img src="/images/4.png" alt="Lata conceptual Cosmic Grape en violeta" loading="lazy" />
+          <img src="/images/4.png" alt="Lata conceptual Cosmic Grape en violeta" loading="lazy" width="1587" height="2245" />
           <figcaption><span>04</span> COSMIC GRAPE</figcaption>
         </figure>
       </div>
@@ -109,6 +123,8 @@ import Footer from "../components/footer.astro";
         src="/images/icustrada.png"
         alt="Aplicación del concepto Quantum Charge en una composición de campaña"
         loading="lazy"
+        width="1920"
+        height="1080"
       />
     </section>
   </main>
@@ -170,6 +186,31 @@ import Footer from "../components/footer.astro";
     align-items: end;
     gap: 2rem;
     max-width: 70rem;
+  }
+
+  .project-facts {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem 2rem;
+    max-width: 70rem;
+    margin: 2rem 0 0;
+    padding-top: 1rem;
+    border-top: 1px solid rgb(245 239 229 / 25%);
+  }
+
+  .project-facts dt {
+    color: #ff6123;
+    font-family: "Space Mono", monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+  }
+
+  .project-facts dd {
+    margin: 0.4rem 0 0;
+    color: #f5efe5;
+    font-family: "Space Mono", monospace;
+    font-size: 0.75rem;
+    line-height: 1.6;
   }
 
   .intro-bottom p {
@@ -392,6 +433,17 @@ import Footer from "../components/footer.astro";
     margin-top: 1rem;
   }
 
+  @media (max-width: 1024px) {
+    .digital {
+      grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+    }
+
+    .digital img {
+      grid-column: 2;
+      max-width: 38rem;
+    }
+  }
+
   @media (max-width: 768px) {
     .intro {
       min-height: 75vh;
@@ -407,6 +459,11 @@ import Footer from "../components/footer.astro";
     .digital {
       grid-template-columns: 1fr;
       gap: 2rem;
+    }
+
+    .project-facts {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
     }
 
     .sistema-grid {
@@ -433,6 +490,7 @@ import Footer from "../components/footer.astro";
     }
 
     .digital img {
+      grid-column: auto;
       max-width: 38rem;
     }
   }

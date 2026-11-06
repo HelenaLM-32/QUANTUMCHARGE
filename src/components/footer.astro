@@ -8,7 +8,17 @@ const isProcessPage = Astro.url.pathname.startsWith("/proceso");
             <p class="eyebrow">QUANTUM CHARGE</p>
             <h2 class="h1-footer">ENERGÍA EN<br />MOVIMIENTO.</h2>
         </div>
-        <a class="back-to-top" href={isProcessPage ? "#inicio" : "/#inicio"}>VOLVER ARRIBA <span aria-hidden="true">↑</span></a>
+        <div class="footer-links">
+            <a
+                class="source-link"
+                href="https://github.com/HelenaLM-32/QUANTUMCHARGE"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                VER CÓDIGO EN GITHUB <span aria-hidden="true">↗</span>
+            </a>
+            <a class="back-to-top" href={isProcessPage ? "#inicio" : "/#inicio"}>VOLVER ARRIBA <span aria-hidden="true">↑</span></a>
+        </div>
     </div>
     <p class="p-footer">
         © 2026 Helena López · Proyecto conceptual de branding y diseño web.
@@ -24,6 +34,20 @@ const isProcessPage = Astro.url.pathname.startsWith("/proceso");
             display: flex;
             justify-content: space-between;
             align-items: end;
+        }
+        .footer-links {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .source-link {
+            color: #ff6123;
+            font-family: "Space Mono", monospace;
+            font-size: 0.7rem;
+            text-decoration: none;
+        }
+        .source-link:hover {
+            color: #f5efe5;
         }
         .h1-footer {
             color: #f5efe5;
@@ -66,6 +90,10 @@ const isProcessPage = Astro.url.pathname.startsWith("/proceso");
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 1.5rem;
+            }
+            .footer-links {
+                align-items: flex-start;
+                flex-direction: column;
             }
             .h1-footer {
                 font-size: 2.5rem;
